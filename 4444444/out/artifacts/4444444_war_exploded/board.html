@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Proiect de an</title>
+	<style>
+		* {
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: "Courier New";
+			margin-bottom: 150px;
+		}
+		
+		.header {
+			background: #F0F8FF;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 80px;
+			width: 100%;
+		}
+		
+		.container {
+			margin: 10px auto 0px;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		
+		
+		.main {
+			width: 40%;
+			min-height: 300px;;
+			min-width: 350px;
+			display: flex;
+			flex-direction: column;
+			padding: 25px;
+			text-align: justify;
+			line-height: 140%;
+			border: 1px solid #C0C0C0;
+		}
+		
+		.inputs {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin-top: 10px;
+		}
+		
+		.inputform {
+			width: 100%;
+			padding: 5px;
+			margin: 5px 0;
+		}
+		
+		.inputform::placeholder {
+			text-transform: uppercase;
+		}
+		
+		.input-incorrect {
+			border: 1px solid red;	
+		}
+		
+		.dane {
+			width: 40%;
+			min-height: 300px;;
+			border: 1px solid #C0C0C0;
+			padding: 15px;
+			margin-left: 80px;
+			line-height: 130%;
+			min-width: 400px;
+		}
+		
+		.aside {
+			margin: 0 15px;
+			width: 13%;
+			border: 1px solid #C0C0C0;
+			padding: 13px;
+			max-height: 180px;
+			min-width: 150px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			line-height: 150%;
+		}
+		
+		.submit {
+			background:white; 
+			text-transform: uppercase;
+			padding: 3px;
+		}
+		
+		.footer {
+			background: #F0F8FF;
+			text-align: center;
+			padding: 30px;
+			text-transform: uppercase;
+			width: 100%;
+			bottom: 0;
+			position: fixed;
+		}
+		
+		@media screen and (max-width: 600px) 
+		{
+				
+			.container {
+				margin: 10px auto 0px;
+				width: 100%;
+				min-width: 400px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+			}
+			
+			.main {
+				width: 80%;
+				margin: 10px 0;
+				min-width: 0px;
+				order:2;
+			}
+			
+			.dane {
+				width: 80%;
+				margin: 10px 0;
+				min-width: 0px;
+				order:2;
+			}
+			
+			.aside {
+				
+				width: 80%;
+				order: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<h1>Your account</h1>
+	</header>
+	<div class="container">
+		<div class="main">
+			<p>
+			Proiect de an TMPS . Spatiu de stocare cloud.
+			</p>
+		</div>
+		<div class="aside">
+			<p>Username</p>
+			<b>
+			[[LOGIN]]
+			</b>
+			<form action="BoardView">
+				<input type="hidden" id="action" name="action" value="profile">
+				<input type="submit" value="PROFILE" class="submit" style="margin-top:35px;">
+			</form>
+			<form action="BoardView">
+				<input type="hidden" id="action" name="action" value="log out">
+				<input type="submit" value="Log out" class="submit" style="margin-top:10px;">
+			</form>
+		</div>
+	</div>
+	<footer class="footer">
+		<p>2020 | Miaun Alexandru
+	</footer>
+</body>
+</html>
